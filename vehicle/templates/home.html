@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Rentals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#111;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#fff;
+    padding:22px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    z-index:100;
+}
+
+.logo{
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+}
+
+.spacer{
+    height:100px;
+}
+
+.page-title{
+    padding:80px 80px 40px 80px;
+}
+
+.page-title h1{
+    font-size:48px;
+    font-weight:600;
+}
+
+.grid{
+    padding:0 80px 120px 80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:40px;
+}
+
+.card{
+    overflow:hidden;
+    background:#fafafa;
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card-info{
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.model-name{
+    font-size:16px;
+    font-weight:500;
+}
+
+.price{
+    font-size:14px;
+    font-weight:600;
+    background:#111;
+    color:#fff;
+    padding:6px 12px;
+}
+
+footer{
+    padding:50px 80px;
+    border-top:1px solid #eee;
+    font-size:14px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">VELOCITY</div>
+    <div class="nav-links">
+        <a href="#">Models</a>
+        <a href="#">Offers</a>
+        <a href="#">Book</a>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="page-title">
+    <h1>Available Models</h1>
+</div>
+
+<div class="grid">
+
+<!-- 20 Cars (Stable Images) -->
+
+<div class="card"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW M3</div><div class="price">₹8,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW M4</div><div class="price">₹9,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW X5</div><div class="price">₹7,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW X7</div><div class="price">₹10,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW 7 Series</div><div class="price">₹11,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Audi RS7</div><div class="price">₹10,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Mercedes AMG</div><div class="price">₹11,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Porsche 911</div><div class="price">₹14,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Tesla Model S</div><div class="price">₹9,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Tesla Model X</div><div class="price">₹10,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1541447271487-09612b3f49f7?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Range Rover</div><div class="price">₹11,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1542367592-8849eb950fd8?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Lamborghini Huracán</div><div class="price">₹18,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Ferrari Roma</div><div class="price">₹20,999/day</div></div></div>
+
+<!-- Duplicate some for 20 total -->
+
+<div class="card"><img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Audi Q8</div><div class="price">₹8,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1517949908114-71669b35d7b3?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW i7</div><div class="price">₹13,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">Mercedes S-Class</div><div class="price">₹12,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW 5 Series</div><div class="price">₹7,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1616788494707-ec28f08d05b1?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW 3 Series</div><div class="price">₹6,999/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6d4?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW i4</div><div class="price">₹8,499/day</div></div></div>
+
+<div class="card"><img src="https://images.unsplash.com/photo-1606619794630-80d4ed3c9a89?auto=format&fit=crop&w=800&q=80"><div class="card-info"><div class="model-name">BMW i8</div><div class="price">₹12,499/day</div></div></div>
+
+</div>
+
+<footer>
+© 2026 Velocity Rentals
+</footer>
+
+</body>
+</html>
