@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login | Vehicle Rental System</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- CARD ---------- */
+.login-card {
+    width: 380px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ---------- TABS ---------- */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #e5e7eb;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.tabs button.active {
+    background: #3b82f6;
+    color: white;
+}
+
+/* ---------- INPUTS ---------- */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- BUTTON ---------- */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #3b82f6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ---------- EXTRA ---------- */
+.extra {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.extra a {
+    text-decoration: none;
+    color: #3b82f6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+
+    <!-- ROLE TABS -->
+    <div class="tabs">
+        <button class="active" onclick="selectRole('customer', this)">Customer</button>
+        <button onclick="selectRole('driver', this)">Driver</button>
+        <button onclick="selectRole('admin', this)">Admin</button>
+    </div>
+
+    <!-- ROLE VALUE FOR BACKEND -->
+    <input type="hidden" id="role" value="customer">
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button class="login-btn">Login</button>
+
+    <div class="extra">
+        <label>
+            <input type="checkbox"> Remember me
+        </label>
+        <a href="#">Forgot password?</a>
+    </div>
+
+</div>
+
+<script>
+function selectRole(role, btn) {
+    document.getElementById("role").value = role;
+
+    document.querySelectorAll(".tabs button").forEach(b => {
+        b.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+}
+</script>
+
+</body>
+</html>

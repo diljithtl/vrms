@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Customer Dashboard | Vehicle Rental System</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: #2f3e52;
+    color: white;
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ---------- PAGE ---------- */
+.container {
+    padding: 25px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ---------- VEHICLE GRID ---------- */
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.vehicle-card {
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.vehicle-img {
+    height: 140px;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.vehicle-info {
+    padding: 15px;
+}
+
+.vehicle-info h3 {
+    margin: 0 0 5px;
+}
+
+.vehicle-info p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-blue {
+    background: #3b82f6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="title">Browse Vehicles</div>
+    <div>Customer</div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="vehicle-grid">
+
+        <div class="vehicle-card">
+            <div class="vehicle-img">Car Image</div>
+            <div class="vehicle-info">
+                <h3>Swift Dzire</h3>
+                <p>₹1200 / day</p>
+                <button class="btn btn-blue">Book Now</button>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <div class="vehicle-img">SUV Image</div>
+            <div class="vehicle-info">
+                <h3>Hyundai Creta</h3>
+                <p>₹2000 / day</p>
+                <button class="btn btn-blue">Book Now</button>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <div class="vehicle-img">Bike Image</div>
+            <div class="vehicle-info">
+                <h3>Royal Enfield</h3>
+                <p>₹800 / day</p>
+                <button class="btn btn-blue">Book Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

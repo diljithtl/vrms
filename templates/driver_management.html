@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Driver Management | Vehicle Rental System</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: #2f3e52;
+    color: white;
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ---------- PAGE ---------- */
+.container {
+    padding: 25px;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-blue { background: #3b82f6; }
+.btn-red { background: #ef4444; }
+.btn-green { background: #22c55e; }
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+/* ---------- STATUS ---------- */
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+.available { background: #22c55e; }
+.ontrip { background: #3b82f6; }
+.inactive { background: #ef4444; }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="title">Driver Management</div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+    <div class="card">
+
+        <div class="header">
+            <h3>Driver List</h3>
+            <button class="btn btn-green">+ Add Driver</button>
+        </div>
+
+        <table>
+            <tr>
+                <th>Driver Name</th>
+                <th>License No</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+
+            <tr>
+                <td>Ramesh Kumar</td>
+                <td>KL-14-5689</td>
+                <td><span class="status available">Available</span></td>
+                <td>
+                    <button class="btn btn-blue">View</button>
+                    <button class="btn btn-red">Remove</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Arjun Das</td>
+                <td>KL-08-9912</td>
+                <td><span class="status ontrip">On Trip</span></td>
+                <td>
+                    <button class="btn btn-blue">View</button>
+                    <button class="btn btn-red">Remove</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Manoj P</td>
+                <td>KL-11-3321</td>
+                <td><span class="status inactive">Inactive</span></td>
+                <td>
+                    <button class="btn btn-blue">View</button>
+                    <button class="btn btn-red">Remove</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

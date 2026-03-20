@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment | Vehicle Rental System</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: #2f3e52;
+    color: white;
+    padding: 14px 25px;
+}
+
+/* ---------- PAGE ---------- */
+.container {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    width: 420px;
+    background: white;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ---------- TABS ---------- */
+.tabs {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #e5e7eb;
+    font-weight: 600;
+}
+
+.tabs button.active {
+    background: #3b82f6;
+    color: white;
+}
+
+/* ---------- INPUT ---------- */
+input {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #22c55e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ---------- PAYMENT SECTIONS ---------- */
+.payment-section {
+    display: none;
+}
+
+.payment-section.active {
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">Payment</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="card">
+        <h2>Make Payment</h2>
+
+        <!-- TABS -->
+        <div class="tabs">
+            <button class="active" onclick="switchPayment('card', this)">Card</button>
+            <button onclick="switchPayment('upi', this)">UPI</button>
+        </div>
+
+        <!-- CARD PAYMENT -->
+        <div id="card" class="payment-section active">
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="Expiry (MM/YY)">
+            <input type="password" placeholder="CVV">
+        </div>
+
+        <!-- UPI PAYMENT -->
+        <div id="upi" class="payment-section">
+            <input type="text" placeholder="UPI ID (example@upi)">
+        </div>
+
+        <button class="btn">Pay ₹3600</button>
+    </div>
+
+</div>
+
+<script>
+function switchPayment(type, btn) {
+    // switch tab style
+    document.querySelectorAll(".tabs button").forEach(b => {
+        b.classList.remove("active");
+    });
+    btn.classList.add("active");
+
+    // switch content
+    document.querySelectorAll(".payment-section").forEach(sec => {
+        sec.classList.remove("active");
+    });
+    document.getElementById(type).classList.add("active");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Booking | Vehicle Rental System</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: #2f3e52;
+    color: white;
+    padding: 14px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- PAGE ---------- */
+.container {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    width: 420px;
+    background: white;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+/* ---------- INPUT ---------- */
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 9px;
+    margin: 6px 0 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- SUMMARY ---------- */
+.summary {
+    background: #f1f5f9;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* ---------- BUTTON ---------- */
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #22c55e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>Confirm Booking</div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="card">
+        <h2>Booking Details</h2>
+
+        <label>Vehicle</label>
+        <input type="text" value="Swift Dzire" disabled>
+
+        <label>Pickup Date</label>
+        <input type="date">
+
+        <label>Return Date</label>
+        <input type="date">
+
+        <div class="summary">
+            <p><b>Price / Day:</b> ₹1200</p>
+            <p><b>Total Days:</b> 3</p>
+            <p><b>Total Amount:</b> ₹3600</p>
+        </div>
+
+        <button class="btn">Proceed to Payment</button>
+    </div>
+
+</div>
+
+</body>
+</html>
